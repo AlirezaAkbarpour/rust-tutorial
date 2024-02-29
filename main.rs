@@ -1,13 +1,12 @@
+use std::io;
+
 fn main(){
-    println!("hello world!");
+    println!("Hello World!");
+    println!("Please input your guess!");
 
-    //variables 
-    let x = 5;
-    println!("x: {x}");
-    //mutable vars or change ability 
-    let mut y = 0;
-    println!("y: {y}");
-    y=3;
-    println!("y after change: {y}");
+    let mut guess = String::new();
 
+    io::stdin().read_line(&mut guess).expect("Failed to read line");
+
+    println!("You guessed : {guess}");
 }
